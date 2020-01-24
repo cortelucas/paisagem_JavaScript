@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flor</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Paisagem</h1>
+    </header>
+    <section>
+        <canvas width = "600px" height="400px"></canvas>
+        <script>
+            let tela = document.querySelector('canvas')
+            let pincel = tela.getContext('2d')
+            pincel.fillStyle = 'lightgray';
+            pincel.fillRect(0, 0, 600, 400);
+
+            function desenhaCirculo(x, y, raio, cor) {
+                pincel.fillStyle = cor;
+                pincel.beginPath();
+                pincel.arc(x, y, raio, 0, 2*3.14);
+                pincel.fill();
+            }
+            pincel.fillStyle = 'LimeGreen'
+            pincel.fillRect(0, 200, 600, 200)
+            pincel.fillStyle = 'SkyBlue'
+            pincel.fillRect(0, 0, 600, 200) 
+            
+            //sol
+            desenhaCirculo(600, 0, 170, 'rgba(240,230,140, 0.3)')
+            desenhaCirculo(600, 0, 150, 'rgba(255,255,0,0.4)')
+            desenhaCirculo(600, 0, 130, 'rgba(255,255,0,0.5)')
+            desenhaCirculo(600, 0, 110, 'rgba(255,215,0,0.6)')
+            desenhaCirculo(600, 0, 90, 'orange')
+            desenhaCirculo(600, 0, 70, 'DarkOrange')
+            desenhaCirculo(600, 0, 50, 'OrangeRed')   
+
+            //nuvens
+            desenhaCirculo(0, 0, 20, 'white')
+            desenhaCirculo(30, 0, 20, 'white')
+            desenhaCirculo(15, 30, 20, 'white')
+            desenhaCirculo(45, 30, 20, 'white')
+            desenhaCirculo(180, 50, 20, 'white')
+            desenhaCirculo(195, 75, 20, 'white')           
+            desenhaCirculo(210, 50, 20, 'white')
+            desenhaCirculo(215, 75, 20, 'white')
+            desenhaCirculo(230, 50, 20, 'white')
+
+            //arvore
+            pincel.fillStyle = 'SaddleBrown'
+            pincel.fillRect(100, 150, 25, 100)
+            desenhaCirculo(125, 150, 50, 'DarkGreen')
+            desenhaCirculo(112.5, 125, 50, 'DarkGreen')
+            desenhaCirculo(100, 150, 50, 'DarkGreen')
+            desenhaCirculo(100, 150, 40, 'ForestGreen')       
+            desenhaCirculo(125, 150, 40, 'ForestGreen')       
+            desenhaCirculo(112.5, 125, 40, 'ForestGreen')
+
+            //caule
+            pincel.fillStyle = 'Forestgreen'
+            pincel.fillRect(295, 180, 5, 200)
+
+            // Flores de fora
+            desenhaCirculo(322, 182, 30, 'violet')
+            desenhaCirculo(322, 182, 25, 'Orchid')
+            desenhaCirculo(322, 222, 30, 'violet')            
+            desenhaCirculo(322, 222, 25, 'Orchid')
+            desenhaCirculo(278, 222, 30, 'violet')
+            desenhaCirculo(278, 222, 25, 'Orchid')
+            desenhaCirculo(278, 182, 30, 'violet')
+            desenhaCirculo(278, 182, 25, 'Orchid')
+
+            //Flores de dentro
+            desenhaCirculo(265, 200, 25, 'violet')
+            desenhaCirculo(280, 200, 20, 'orchid')
+            desenhaCirculo(290, 200, 15, 'violet')
+            desenhaCirculo(335, 200, 25, 'violet')
+            desenhaCirculo(320, 200, 20, 'orchid')
+            desenhaCirculo(315, 200, 15, 'violet')
+            desenhaCirculo(300, 165, 25, 'violet')
+            desenhaCirculo(300, 180, 20, 'orchid')
+            desenhaCirculo(300, 190, 15, 'violet')
+            desenhaCirculo(300, 235, 25, 'violet')
+            desenhaCirculo(300, 220, 20, 'orchid')
+            desenhaCirculo(300, 210, 15, 'violet')
+
+            //Miolo
+            desenhaCirculo(300, 200, 15, 'yellow')
+            desenhaCirculo(300, 200, 12.5, 'orange')
+            desenhaCirculo(300, 200, 10, 'yellow')
+            desenhaCirculo(300, 200, 7.5, 'orange')
+            desenhaCirculo(300, 200, 5, 'yellow')
+            desenhaCirculo(300, 200, 2.5, 'orange')
+            desenhaCirculo(300, 200, 1, 'yellow')
+        </script>
+        </script>
+        </script>
+    </section>
+    <footer>
+        <p>&copy; LucasCorte</p>
+    </footer>
+</body>
+</html>
